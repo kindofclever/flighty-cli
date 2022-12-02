@@ -17,6 +17,8 @@ const FlightDetails = () => {
     roundTrip,
     setChosenFlightBack,
     chosenFlightBack,
+    setChosenFlightTo,
+    chosenFlightTo,
   } = useStore();
 
   const detailFlightData = flightsTo.find(
@@ -79,12 +81,26 @@ const FlightDetails = () => {
           </div>
         </div>
       )}
-      <Link href='/booking'>
-        <Button
-          text='Book'
-          backgroundColor='#292829'
-        />
-      </Link>
+      <div className='flex justify-center items-center gap-5 -mt-20'>
+        <Link href='/flights'>
+          <Button
+            text='Back'
+            backgroundColor='#292829'
+          />
+        </Link>
+        <Link href='/booking'>
+          <div
+            onClick={() => {
+              setChosenFlightTo(flightNr);
+            }}
+          >
+            <Button
+              text='Book'
+              backgroundColor='#292829'
+            />
+          </div>
+        </Link>
+      </div>
     </div>
   );
 };

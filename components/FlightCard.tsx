@@ -1,8 +1,8 @@
 import Link from 'next/link';
 
 interface FlightCardProps {
-  from: string;
-  to: string;
+  from: string | number;
+  to: string | number;
   go: string;
   there: string;
   flightNumber: string;

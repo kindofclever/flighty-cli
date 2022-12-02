@@ -2,8 +2,12 @@ import Link from 'next/link';
 
 import Button from '../components/Button';
 import Header from '../components/Header';
+import useStore from '../store/store';
 
 const Booking = () => {
+  const { chosenFlightTo, flightsTo, flightsBack, chosenFlightBack } =
+    useStore();
+
   return (
     <div className='flex flex-col justify-center items-center mt-20'>
       <Header
@@ -11,16 +15,18 @@ const Booking = () => {
         span='details here'
         description='If you want to book this flight, fill in the form and click the button below'
       />
+      <h3>Flight information:</h3>
+      {}
       <div className='flex justify-center items-center gap-5'>
-        <Link href='/thankyou'>
+        <Link href={`/flights/${chosenFlightTo}`}>
           <Button
-            text='Send Infos and confirm booking'
+            text='Back'
             backgroundColor='#292829'
           />
         </Link>
-        <Link href='/flights'>
+        <Link href='/thankyou'>
           <Button
-            text='Back'
+            text='Send Infos and confirm booking'
             backgroundColor='#292829'
           />
         </Link>

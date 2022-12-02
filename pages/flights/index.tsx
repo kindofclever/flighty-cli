@@ -6,6 +6,8 @@ import useStore from '../../store/store';
 import { ColorRing } from 'react-loader-spinner';
 import Head from 'next/head';
 import FlightCard from '../../components/FlightCard';
+import Button from '../../components/Button';
+import Link from 'next/link';
 
 const Flights = () => {
   const {
@@ -50,7 +52,7 @@ const Flights = () => {
 
   console.log(roundTrip);
   return (
-    <div className='flex justify-center items-center flex-col'>
+    <div className='flex flex-col justify-center items-center mt-20'>
       <Head>
         <title>Flighty | Flights</title>
       </Head>
@@ -79,8 +81,8 @@ const Flights = () => {
           <div className='grid md:grid-cols-3 w-[400px] md:w-[1500px] h-[200px] md:h-[370px] gap-5 m-10'>
             {flightsTo.map((flight: any) => (
               <FlightCard
-                from={flight.depatureDestination}
-                to={flight.arrivalDestination}
+                from={from}
+                to={to}
                 go={flight.depatureAt}
                 there={flight.arriveAt}
                 flightNumber={flight.flightNumber}
@@ -89,6 +91,14 @@ const Flights = () => {
             ))}
           </div>
         )}
+      </div>
+      <div className='flex justify-center items-center gap-5 mt-5'>
+        <Link href='/home'>
+          <Button
+            text='Back'
+            backgroundColor='#292829'
+          />
+        </Link>
       </div>
     </div>
   );
