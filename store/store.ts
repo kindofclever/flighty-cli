@@ -123,13 +123,13 @@ const useStore = create<State>((set) => ({
       detailFlight,
     })),
 
-  chosenFlightBack: {},
+  chosenFlightBack: '',
   setChosenFlightBack: (chosenFlightBack) =>
     set((state) => ({
       ...state,
       chosenFlightBack,
     })),
-  chosenFlightTo: {},
+  chosenFlightTo: '',
   setChosenFlightTo: (chosenFlightTo) =>
     set((state) => ({
       ...state,

@@ -81,7 +81,7 @@ const FlightDetails = () => {
           </div>
         </div>
       )}
-      <div className='flex justify-center items-center gap-5 -mt-20'>
+      <div className='flex justify-center items-center gap-5'>
         <Link href='/flights'>
           <Button
             text='Back'
