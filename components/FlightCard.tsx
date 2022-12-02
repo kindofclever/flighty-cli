@@ -1,4 +1,5 @@
 import Link from 'next/link';
+
 interface FlightCardProps {
   from: string;
   to: string;
@@ -20,7 +21,7 @@ const FlightCard: React.FC<FlightCardProps> = ({
     <Link href={`/flights/${flightNumber}`}>
       <div className='w-[370] h-[200px] flex flex-col justify-center items-center text-xl md:text-3xl rounded-xl hover:bg-[#576ab9] hover:text-[#fefdfe]'>
         <div className='flex justify-between items-center'>
-          <p className='text-[#576ab9]'>From:</p>
+          <p className='text-[#f31f51]'>From:</p>
           <p>{from}</p>
         </div>
         <div className='flex justify-between items-center'>

@@ -1,11 +1,11 @@
 import { useEffect } from 'react';
 
-import Header from '../components/Header';
-import useStore from '../store/store';
+import Header from '../../components/Header';
+import useStore from '../../store/store';
 
 import { ColorRing } from 'react-loader-spinner';
 import Head from 'next/head';
-import FlightCard from '../components/FlightCard';
+import FlightCard from '../../components/FlightCard';
 
 const Flights = () => {
   const {
@@ -16,8 +16,7 @@ const Flights = () => {
     setLoading,
     setFlightsTo,
     flightsTo,
-    setFlightsBack,
-    flightsBack,
+    roundTrip,
   } = useStore();
 
   useEffect(() => {
@@ -36,7 +35,7 @@ const Flights = () => {
             minorQuantity: 0,
             go: go,
             back: '2022-12-13',
-            roundTrip: 'yes',
+            roundTrip: roundTrip,
           }),
         }
       );
@@ -82,7 +81,7 @@ const Flights = () => {
                 go={flight.depatureAt}
                 there={flight.arriveAt}
                 flightNumber={flight.flightNumber}
-                seats={0}
+                seats={flight.avaliableSeats}
               />
             ))}
           </div>

@@ -32,8 +32,11 @@ interface State {
   flightsBack: any;
   setFlightsBack: (flightsBack: any) => void;
 
+  detailFlight: any;
+  setDetailFlight: (detailFlight: any) => void;
+
   buttonClicked: boolean;
-  setButtonClicked: (buttonClicked: boolean) => void;
+  setButtonClicked: (detailFlight: boolean) => void;
 }
 
 const useStore = create<State>((set) => ({
@@ -105,6 +108,13 @@ const useStore = create<State>((set) => ({
     set((state) => ({
       ...state,
       flightsBack,
+    })),
+
+  detailFlight: {},
+  setDetailFlight: (detailFlight) =>
+    set((state) => ({
+      ...state,
+      detailFlight,
     })),
 
   buttonClicked: false,
