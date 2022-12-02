@@ -15,6 +15,7 @@ const Flights = () => {
     loading,
     setLoading,
     setFlightsTo,
+    setFlightsBack,
     flightsTo,
     roundTrip,
   } = useStore();
@@ -41,11 +42,13 @@ const Flights = () => {
       );
       const data = await res.json();
       setFlightsTo(data.flightsTo);
+      setFlightsBack(data.flightsBack);
       setLoading(false);
     };
     fetchData();
-  }, []);
+  }, [roundTrip]);
 
+  console.log(roundTrip);
   return (
     <div className='flex justify-center items-center flex-col'>
       <Head>

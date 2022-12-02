@@ -5,7 +5,7 @@ import Button from './Button';
 
 const Landing = () => {
   return (
-    <div className='flex flex-col justify-center items-center h-screen bg-clouds bg-cover bg-no-repeat'>
+    <div className='flex flex-col justify-center items-center justify-center h-screen bg-clouds bg-cover bg-no-repeat'>
       <div className='bg-[#fefdfe] py-10 px-20 rounded-xl flex flex-col justify-center items-center'>
         <Header
           title='Welcome to '

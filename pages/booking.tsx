@@ -9,12 +9,12 @@ const Booking = () => {
       <Header
         title='See all the flight'
         span='details here'
-        description='If you want to book this flight, click the button below'
+        description='If you want to book this flight, fill in the form and click the button below'
       />
       <div className='flex flex-col justify-center items-center'>
         <Link href='/thankyou'>
           <Button
-            text='Confirm booking'
+            text='Send Infos and confirm booking'
             backgroundColor='#292829'
           />
         </Link>
