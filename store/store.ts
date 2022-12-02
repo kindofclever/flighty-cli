@@ -1,4 +1,4 @@
-import { Flights } from './../../server/src/helpers/types';
+import { Flights } from './../types/types';
 import create from 'zustand';
 
 interface State {
@@ -26,11 +26,11 @@ interface State {
   back: string;
   setBack: (back: string) => void;
 
-  flights: Flights;
-  setFlights: (flights: any) => void;
+  flightsTo: any;
+  setFlightsTo: (flightsTo: any) => void;
 
-  allFlights: Flights[];
-  setAllFlights: (allFlights: Flights[]) => void;
+  flightsBack: any;
+  setFlightsBack: (flightsBack: any) => void;
 
   buttonClicked: boolean;
   setButtonClicked: (buttonClicked: boolean) => void;
@@ -93,23 +93,18 @@ const useStore = create<State>((set) => ({
       back,
     })),
 
-  flights: {
-    flight_id: '',
-    depatureLocation: '',
-    arrivalLocation: '',
-    itineraries: [],
-  },
-  setFlights: (flights) =>
+  flightsTo: [],
+  setFlightsTo: (flightsTo) =>
     set((state) => ({
       ...state,
-      flights,
+      flightsTo,
     })),
 
-  allFlights: [],
-  setAllFlights: (allFlights) =>
+  flightsBack: [],
+  setFlightsBack: (flightsBack) =>
     set((state) => ({
       ...state,
-      allFlights,
+      flightsBack,
     })),
 
   buttonClicked: false,

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
-import Header from '../components/Header';
-import Button from '../components/Button';
+import Header from './Header';
+import Button from './Button';
 
 const Landing = () => {
   return (
@@ -12,7 +12,7 @@ const Landing = () => {
           description='Find the flight of your dreams!'
           span=' Flighty'
         />
-        <Link href='/Home'>
+        <Link href='/home'>
           <div className='animate-bounce'>
             <Button
               backgroundColor='#292829'

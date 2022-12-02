@@ -24,8 +24,6 @@ const SearchBar = () => {
     roundTrip,
     setRoundTrip,
     setLoading,
-    flights,
-    setFlights,
   } = useStore();
 
   return (
@@ -84,7 +82,7 @@ const SearchBar = () => {
         </div>
       )}
       <div className='fles justify-center items-center'>
-        <Link href='/Flights'>
+        <Link href='/flights'>
           <Button
             backgroundColor='#292829'
             text='Search'

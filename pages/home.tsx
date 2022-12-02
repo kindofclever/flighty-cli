@@ -1,9 +1,14 @@
+import Head from 'next/head';
+
 import Header from '../components/Header';
 import SearchBar from '../components/SearchBar';
 
 const Home = () => {
   return (
     <div>
+      <Head>
+        <title>Flighty | Search</title>
+      </Head>
       <div className='mt-10 flex flex-col justify-center items-center'>
         <Header
           title='Find what you are'
