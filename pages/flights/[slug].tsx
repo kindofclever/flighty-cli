@@ -27,11 +27,11 @@ const FlightDetails = () => {
   console.log(flightsBack);
 
   return (
-    <div className='flex flex-col justify-center items-center'>
+    <div className='flex flex-col justify-center items-center mt-20'>
       <Header
         title='See all the flight'
         span='details here'
-        description='If you want to book this flight, click the button below'
+        description='If you want to continue to book, click the button below'
       />
       <div className='flex flex-col justify-center items-center'>
         <h3 className='text-2xl md:4xl uppercase border-2 p-5 rounded-xl mb-5'>
@@ -45,11 +45,11 @@ const FlightDetails = () => {
         <p>{detailFlightData?.avaliableSeats}</p>
       </div>
       {roundTrip === 'yes' && (
-        <div className='flex flex-col justify-center items-center'>
+        <div className='flex flex-col justify-center items-center mt-10'>
           <h3>
             Because you chose a round trip please also choose a flight back
           </h3>
-          <div className='grid md:grid-cols-3 w-[400px] md:w-[1500px] h-[200px] md:h-[370px] gap-5 m-10'>
+          <div className='grid md:grid-cols-3 w-[400px] md:w-[1500px] h-[200px] md:h-[370px] gap-5'>
             <FilterForInfo
               label='Available flights back'
               setState={setChosenFlightBack}
@@ -67,11 +67,11 @@ const FlightDetails = () => {
                   flight.depatureAt +
                   ' --- Price Adult: ' +
                   flight.prices.adult +
-                  '--- Price Child: ' +
+                  ' --- Price Child: ' +
                   flight.prices.child +
-                  '--- Available Seats: ' +
+                  ' --- Available Seats: ' +
                   flight.avaliableSeats +
-                  '--- Flight number: ' +
+                  ' --- Flight number: ' +
                   flight.flightNumber
               )}
               value={chosenFlightBack}
@@ -79,7 +79,6 @@ const FlightDetails = () => {
           </div>
         </div>
       )}
-
       <Link href='/booking'>
         <Button
           text='Book'

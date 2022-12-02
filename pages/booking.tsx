@@ -5,16 +5,22 @@ import Header from '../components/Header';
 
 const Booking = () => {
   return (
-    <div>
+    <div className='flex flex-col justify-center items-center mt-20'>
       <Header
         title='See all the flight'
         span='details here'
         description='If you want to book this flight, fill in the form and click the button below'
       />
-      <div className='flex flex-col justify-center items-center'>
+      <div className='flex justify-center items-center gap-5'>
         <Link href='/thankyou'>
           <Button
             text='Send Infos and confirm booking'
+            backgroundColor='#292829'
+          />
+        </Link>
+        <Link href='/flights'>
+          <Button
+            text='Back'
             backgroundColor='#292829'
           />
         </Link>
